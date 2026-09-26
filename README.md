@@ -1,54 +1,84 @@
-# Hotel-Management-System
-The Hotel Management System is a PHP-based web application for managing hotel operations, including guests, rooms, reservations, payments, and hotel services.
+# Hotel Management System — PHP 8.3
 
-# Features
+A complete native PHP 8.3 hotel management application
 
-Guest management
+## Main features
 
-Room management
+- Administrator login/logout
+- Dashboard
+- Customers/guests
+- Room types and rates
+- Rooms and availability
+- Reservations
+- Guest check-in
+- Guest check-out
+- Payments
+- Operational reports
+- Hotel profile settings
+- CSRF protection
+- PDO prepared statements
+- Secure password hashing
+- Responsive HTML interface
+- CSS kept in a separate stylesheet
 
-Room types
+## Requirements
 
-Reservations and bookings
+- PHP 8.3+
+- MySQL/MariaDB
+- Apache/XAMPP
+- PHP extensions: PDO and PDO_MySQL
 
-Check-in and check-out
+## Installation with XAMPP
 
-Payments and billing
+1. Extract the folder into `C:\xampp\htdocs\`.
+2. Start Apache and MySQL.
+3. Open `config.php` and check the database settings if necessary.
+4. Open:
 
-Hotel services
+   `http://localhost/Hotel_Management_System_PHP83/install.php`
 
-Staff management
+5. Enter the MySQL credentials and create the administrator account.
+6. After installation, open `login.php`.
+7. Sign in with the administrator credentials created during installation.
 
-Reports
+## Default installation values
 
-Admin dashboard
+The installer starts with:
 
-System settings
+- Database: `hotel_management`
+- MySQL user: `root`
+- MySQL password: `guards`
+- Administrator username: `admin`
+- Administrator password: `admin123`
 
+Change these values during installation as appropriate for your computer.
 
-# Requirements
+## Important
 
-PHP 8.3
+This version is a standalone native PHP 8.3 application.
 
-MySQL/MariaDB
+The application uses no bundled third-party framework. The stylesheet is included locally.
 
-Apache/XAMPP
+## Database
 
-PDO and PDO_MySQL
+`database.sql` contains the complete database structure. The installer imports it automatically.
 
+## PHP built-in server
 
-# Installation
+From the project directory:
 
-Extract the system into C:\xampp\htdocs\.
+```text
+php -S localhost:8000
+```
 
-Start Apache and MySQL in XAMPP.
+Then open:
 
-Create the MySQL database.
+`http://localhost:8000/`
 
-Open install.php in your browser.
+## Security
 
-Complete the installation and log in.
-
-# Technology
-
-PHP 8.3 · MySQL · HTML · CSS · JavaScript
+- Use a strong administrator password.
+- Use a dedicated database user in production.
+- Enable HTTPS in production.
+- Back up the database regularly.
+- Restrict access to `install.php` after installation.
